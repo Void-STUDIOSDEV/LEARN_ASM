@@ -1,3 +1,5 @@
+#reason 'al' did not work is because it is part of rax, so it got overwritten by syscall.
+
 .bss
     .comm buffer, 64 #for user input
 
