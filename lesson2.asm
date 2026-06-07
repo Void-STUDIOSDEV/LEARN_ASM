@@ -21,9 +21,9 @@
 
 .data
     message1:
-        .asciz "Hello, World! [Statement 1]\n"
+        .ascii "Hello, World! [Statement 1]\n"
     message1_len = . - message1 #calculates the length of the message
 
     message2:
-        .asciz "HELLO, WORLD [Statement 2]\n"
+        .ascii "HELLO, WORLD [Statement 2]\n"
     message2_len = . - message2 #calculates the length of the second message
