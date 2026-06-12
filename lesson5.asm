@@ -5,6 +5,10 @@
         .ascii "INPUT: "
     prompt_len = . - prompt
 
+    return:
+        .ascii "YOU WROTE: "
+    return_len = . - return
+
 .bss
     .comm buffer, 64
 
@@ -22,7 +26,14 @@
         movq $0, %rax #sysread
         movq $0, %rdi #stdin
         leaq buffer(%rip), %rsi #load the address
-        movq $64, %rdx #max number of bytes to read
+        movq $32, %rdx #max number of bytes to read
+        syscall
+
+    #---print input notice---
+        movq $1, %rax
+        movq $1, %rdi
+        leaq return(%rip), %rsi
+        movq $return_len, %rdx
         syscall
 
     #---print input---
