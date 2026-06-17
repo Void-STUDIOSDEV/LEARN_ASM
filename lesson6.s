@@ -3,7 +3,6 @@
 .globl _start #declares the start
 
 .section .text
-
 _start:
 	movq $60, %rax
 	movq $3, %rdi #this makes an exit code when paired these lines

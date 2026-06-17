@@ -3,7 +3,6 @@
 .global _start
 
 .section .text
-
 _start:
     movq $3, %rdi #moves 3 into rdi
     movq %rdi, %rax #moves rdi into rax, making rax 3
