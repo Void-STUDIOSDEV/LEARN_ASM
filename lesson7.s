@@ -1,3 +1,5 @@
+#probably the hardest I have done so far. Sadly had to use FireFox for assistance.
+
 .global _start
 
 .section .text
