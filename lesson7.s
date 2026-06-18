@@ -17,9 +17,5 @@ _start:
     mulq %rdi #multiplies rdi by rax, making it 4*20 [80] going into rax
     movq %rax, %rdi #replaces what is inside rdi with rax [making rdi 80]
 
-    #---remove this once not needed
-    movq $80, %rdi
-    xor %rdx, %rdx
-    #------------------------------
     movq $60, %rax #replaces 80 that is inside rax with 60
     syscall
