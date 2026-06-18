@@ -2,7 +2,7 @@
 ;the following program was written in VIM, a lightweight CODE/TEXT editor. A heavier, but more user-friendly CODE/TEXT editor would be Visual Studio and Visual Studio Code.
 ;a lightweight Windows alternative to VIM would be (in my experience) NotePad Plus Plus (NotePad++).
 
-;THE FOLLOWING COMPILE STEPS ASSUMES NASM AND THE LINKER, LD, AND LINUX.
+;THE FOLLOWING COMPILE STEPS ASSUMES NASM, THE LD LINKER, AND LINUX.
 
 ;to compile, type "nasm -f elf64 intro.asm -o intro.o"
 ;to link, type 'ld intro.o -o intro"
@@ -12,7 +12,7 @@ section .data
 msg db "WELL, ASSEMBLY IS COOL, RIGHT?", 10
 msg_len equ $ - msg
 
-warning db "[CTRL + X] TO STOP.", 10
+warning db "[CTRL + C] TO STOP.", 10
 warning_len equ $ - warning
 
 
